@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Container } from "react-bootstrap";
 import CardItem from "../components/reusable/cardItem";
-import doctorImg from "../../../assets/img/doctorProfile.png";
+import doctorImg from "../assets/img/doctorProfile.png";
 
 export default function DemoCard() {
   return (

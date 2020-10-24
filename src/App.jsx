@@ -1,18 +1,15 @@
-import React, {useState,useEffect} from 'react'
-import logo from './logo.svg';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Doctor from './components/doctors/profile'
-import Doctor2 from './components/doctors/appointment/book'
-import Doctor3 from './components/doctors/appointment/approval'
-import {BrowserRouter as Router, Switch, Link, Route} from 'react-router-dom'
+import React, { useState, useEffect } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import DemoCard from './demo/demoCard'
+import { BrowserRouter as Router, Switch, Link, Route } from "react-router-dom";
 
 function App() {
-  const [data, setData] = useState();
   // axios.get('http://localhost:3000/names').then(res => setData(res)).catch(res => res.response)
-  const totalCount = 5;
   return (
-    <div className="App" style={{backgroundColor:"#F1F1F1"}}>
+    <div className="App" style={{ backgroundColor: "#F1F1F1" }}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -27,24 +24,15 @@ function App() {
           Learn React
         </a>
       </header>
-      
+
       <Router>
-      <Link to="/page1">Page 1</Link>
-      <Link to="/page2">Page 2</Link>
-      <Link to="/page3">Page 3</Link>
+        <Link to="/card">Card Demo</Link>
         <Switch>
-          <Route path="/page1">
-            <Doctor/>
-          </Route>
-          <Route path="/page2">
-            <Doctor2/>
-          </Route>
-          <Route path="/page3">
-            <Doctor3/>
+          <Route path="/card">
+            <DemoCard />
           </Route>
         </Switch>
       </Router>
-      
     </div>
   );
 }

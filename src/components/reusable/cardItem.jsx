@@ -1,11 +1,11 @@
 import React from "react";
 import { Badge, Card, Col, Row, Button, Image } from "react-bootstrap";
-
+import styles from './cardItem.module.css'
 export default function CardItem(props) {
   return (
-    <Card style={{ boxShadow: "(0,0,0,0.3)" }} className="my-2 card--group">
-      <Row className="align-items-center book--row m-3">
-        <Col className="book--item col-1 mr-4">
+    <Card style={{ boxShadow: "(0,0,0,0.3)" }} className={`my-2 ${styles["card--group"]}`}>
+      <Row className={`align-items-center ${styles["book--row"]} m-3`}>
+        <Col className={`${styles["book-item"]} col-1 mr-4`}>
           {props.src ? (
             <Image src={props.src} className="rounded" />
           ) : (
@@ -23,7 +23,7 @@ export default function CardItem(props) {
             ? <Button size="sm" variant="outline-warning">
                 {props.buttonText && (props.buttonText[0] || "blank")}
               </Button>
-            : <Badge className="px-3 py-1" pill variant={
+            : <Badge className="px-3 py-2" pill variant={
               props.buttonText === "Approve" 
                 ? "success" 
                 : props.buttonText === "Rejected" 
@@ -34,7 +34,7 @@ export default function CardItem(props) {
           </Col>
           {console.log(props.mode)}
           {props.buttonMode === 3 && (
-            <Col className="button--action">
+            <Col className={`${styles["button--action"]}`}>
               <Button size="sm" variant="outline-danger">
                 {props.buttonText[1]}
               </Button>

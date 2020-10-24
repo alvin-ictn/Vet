@@ -1,0 +1,39 @@
+.col > .badge {
+  padding: unset;
+  font-size: unset;
+  line-height: unset;
+}
+
+.card--group {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.book--row {
+  height: 50px;
+  font-weight:700;
+}
+
+.book--row > * {
+  padding: 0;
+  text-align: center;
+  margin:0;
+}
+
+.book--item {
+  height: 100%;
+  width: 50px;
+}
+
+.book--item > * {
+  height: inherit;
+  width: inherit;
+}
+
+.button--action{
+  padding: 0 5px !important;
+  font-weight:700;
+}
+
+.nav--menu {
+  height: 56px;
+}
